@@ -1,0 +1,215 @@
+.portalcontainer {
+  text-align: left;
+}
+.head {
+  background-color: #009cdb;
+  color: #fff;
+  padding: 10px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.head img,
+p,
+i {
+  margin: 5px;
+}
+
+.logo {
+  width: 100px; 
+  height: 40px; 
+}
+
+.head p {
+  flex-grow: 1;
+  text-align: center;
+  margin-top: 20px;
+}
+#name-label {
+  font-size: 20px;
+  font-weight: lighter;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+/* ... existing code ... */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #e6383c;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+ul li.active {
+  background-color: #009cdb;
+  color:#e6383c;
+}
+
+ul li a {
+  text-decoration: none;
+  color:#ffffff;
+
+}
+.table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  border-radius: 10px; 
+  overflow: hidden; 
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #009cdb;
+  color: #fff;
+  border-radius: 10px 10px 0 0; 
+}
+
+.table td {
+  background-color: #fff;
+}
+
+.table tbody tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+.table thead th {
+  text-align: center;
+}
+
+.table tbody tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+.search-box {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.search-box input[type="text"] {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #009cdb;
+  margin-top: 10px;
+  width: 960px;
+  border-style: 1px solid;
+  height: 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+#chart {
+  display: flex;
+}
+
+.chart-container {
+  flex: 1;
+  height: 300px;
+  margin: 10px;
+}
+::placeholder {
+  color: #009cdb;
+}
+input:focus {
+  outline: none;
+}
+.toggle-container {
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  position: relative;
+  border-radius: 24px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.toggle-switch {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.toggle-container input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-switch {
+  transform: translateX(16px);
+  background-color: #009cdb;
+}
+
+@media screen and (max-width) {
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head p {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    background-color: black;
+  }
+}
+.container-tab{
+  margin-top: 20px;
+}
+.tab-content{
+  margin-top: 10px;
+}

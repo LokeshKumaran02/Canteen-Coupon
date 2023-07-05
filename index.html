@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="head">
+    <img src="https://companieslogo.com/img/orig/UNOMINDA.NS_BIG-ae49e1e3.png?t=1674896667" alt="UNO Minda" class="logo">
+  </div> 
+    <form>
+        <h1>Login</h1>
+        <div class="empid">
+            <label for="employee-id">Employee ID: <span id="span">* required</span></label><br>
+            <input type="text" id="employee-id" name="employee-id" placeholder="&nbsp;Employee ID" autocomplete="off" oninput="validateNumericInput(this)" maxlength="7" minlength="6" pattern="[0-9]">
+        </div>
+        <div class="password">
+            <label for="password">Password: <span id="span">* required</span></label><br>
+            <input type="password" id="password" name="password" placeholder="&nbsp;Password" autocomplete="off" maxlength="15" minlength="5">
+        </div>
+        <br>
+        <div class="button">
+            <button type="button" class="submitbtn" onclick="validate()">Login</button><br>
+        </div>
+    <div id="errorModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Login</h2>
+      </div>
+      <div id="errorMessages"></div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+body {
+  font-family: Arial;
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 10000px; /* Adjust the value as per your requirement */
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.left {
+  flex: 1;
+  background-color: #fff;
+  border: 3px solid #009cdb;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#imgbox {
+  margin-left: 500px;
+  margin-top: -400px;
+}
+
+ #otp-label {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 30px;
+  font-weight: bold;
+  color: #009cdb;
+  margin-left: 500px;
+  margin-top: 10px;
+}
+
+#timer-label {
+  color: red;
+  font-size: 18px;
+  margin-top: 15px; /* Adjust margin-top value */
+  margin-left: 500px;
+  text-align: right;
+}
+
+#otp-label label {
+  display: inline-block;
+  font-size: 24px;
+  color: #ffcc00;
+  font-weight: bold;
+  margin: 0 1px;
+  background-color: #070707;
+  padding: 11px;
+  border-radius: 6px;
+}
+
+
+
+form {
+  margin: 0 auto;
+  width: 900px;
+}
+
+h1 {
+  text-align: center;
+  color: #009cdb;
+}
+
+.input-field {
+  margin-bottom: 20px;
+  color: #009cdb;
+}
+
+.input-field label {
+  font-size: 15px;
+  color: #009cdb;
+}
+
+.input-field input {
+  width: 53%;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #009cdb;
+  padding: 5px;
+}
+
+.input-field input[type="text"] {
+  text-transform: uppercase;
+}
+
+.input-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-field.half-width {
+  flex: 0 0 28%;
+  margin-right: 60px;
+}
+
+.input-field.half-width:first-child {
+  margin-right: 0;
+}
+
+.input-field.half-width input {
+  width: 85%;
+}
+
+.radio-options {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.radio-options label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.radio-options input[type="radio"] {
+  display: none;
+}
+
+.radio-options label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.radio-options input[type="radio"]:checked + label:before {
+  background-color: #000;
+}
+
+.submitbtn {
+  font-size: 20px; 
+  padding: 0px 237px;
+  border-radius: 5px; 
+  color: #fff;
+}
+button {
+  width: 237px;
+  display: flex;
+  height: 40px;
+  background-color: #009cdb;
+
+  border-style: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.modal-header {
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-footer {
+  padding: 10px;
+  text-align: right;
+}
+
+.close {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  width: 60px;
+}
+
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #535455;
+}
+
+#unit,
+#name,
+#phone,
+#count {
+  color: #009cdb;
+}
+
+#span {
+  color: red;
+  font-size: 10px;
+  font-style: italic;
+}
+
+#sp {
+  color: #009cdb;
+  font-size: 10px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #009cdb;
+}
+
+input[type="radio"]:checked {
+  background-color: #009cdb;
+  border-color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+  .left,
+  .right {
+    flex-direction: column;
+  }
+
+  .input-field.half-width {
+    flex: 0 0 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .left,
+  .right {
+    flex-direction: column;
+  }
+
+  .input-field input {
+    width: 100%;
+  }
+
+  .input-field.half-width {
+    flex: 0 0 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

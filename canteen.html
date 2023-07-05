@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="canteen.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <form action="#" id="form">
+        <h1>CANTEEN GUEST COUPON</h1>
+        <div class="input-field">
+          <label for="unit">Unit/Department: <span id="span">* required</span></label><br>
+          <input type="text" id="unit" name="unit" placeholder="Unit" oninput="validateStringInput(this)" maxlength="15" minlength="2" autocomplete="off">
+        </div>
+        <div class="input-field">
+          <label for="name">Name: <span id="span">* required</span></label><br>
+          <input type="text" id="name" name="name" placeholder="Name" maxlength="25" minlength="2" oninput="validateStringInput(this)" autocomplete="off">
+        </div>
+        <div class="input-fields">
+          <div class="input-field half-width">
+            <label for="phone">Phone Number: <span id="span">* required</span></label><br>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number" maxlength="10" oninput="validateNumericInput(this)" autocomplete="off">
+          </div>
+          <div class="input-field half-width">
+            <label>Number of Lunch: <span id="sp">Max=100</span> <span id="span">* required </span></label><br>
+            <input type="text" id="count" name="count" min="1" max="100" maxlength="3" placeholder="Number of Lunch(s)" oninput="validateNumericInput(this)" autocomplete="off">
+          </div>
+        </div>
+        <div class="input-field">
+          <label for="given">Given For:<span id="span">*required</span></label><br>
+          <input type="text" id="given" name="given for" minlength="1" maxlength="25" placeholder="Given For" oninput="validateStringInput(this)" autocomplete="off" onkeydown="handleTabKey(event)">
+        </div>
+        
+        <div class="input-field">
+          <label>Meal Option: <span id="span">* required</span></label><br>
+          <div class="radio-options">
+            <input type="radio" name="option" value="Breakfast" id="option1">
+            <label for="option1">Breakfast</label>
+            <input type="radio" name="option" value="Lunch" id="option2">
+            <label for="option2">Lunch</label>
+            <input type="radio" name="option" value="Dinner" id="option3">
+            <label for="option3">Dinner</label>
+            <input type="radio" name="option" value="Supper" id="option4">
+            <label for="option4">Supper</label>
+          </div>
+        </div>
+        
+        <div class="button">
+          <button type="submit" class="submitbtn" onclick="validate()">Submit</button>
+        </div>
+        <div class="right">
+          <div id="imgbox">
+            <img src="" id="qrimage">
+          </div>
+          <div id="otp-label" style="display: none;">
+            <label id="otp-digit1"></label>
+            <label id="otp-digit2"></label>
+            <label id="otp-digit3"></label>
+            <label id="otp-digit4"></label>
+          </div>
+
+          <div id="timer-label"></div> <!-- Add this line for displaying the timer -->
+        </div>
+      </form>
+    </div>
+    <div class="right">
+    </div>
+  </div>
+  <div id="errorModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Canteen Coupon</h2>
+      </div>
+      <div id="errorMessages"></div>
+      <div class="modal-footer">
+        <button class="close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+  <script src="canteen.js"></script>
+</body>
+</html>
